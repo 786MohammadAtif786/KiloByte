@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const { UserController } = require('../controllers/index');
+const { ItemController } = require('../controllers/index');
 const { isLogdin } = require('../utlis/auth');
 
 const route = Router();

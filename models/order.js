@@ -1,10 +1,6 @@
 const { Schema, model, ObjectId } = require('mongoose');
 
 const orderSchema = new Schema({
-  Items: [{
-      type: String,
-      required: true
-  }],
   deliveryPersonID: {
     type: Number,
     unique: true,
@@ -17,7 +13,8 @@ const orderSchema = new Schema({
   },
   pickupLocations: {
     type: String,
-    required: true
+    required: true,
+    ref: 'Item'
   },
   customer: {
     type: String,

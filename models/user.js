@@ -31,6 +31,10 @@ const customerSchema = new Schema({
   order: {
     type: ObjectId,
     ref: 'Order'
+  },
+  item: {
+    type: ObjectId,
+    ref: 'Item'
   }
 })
 
